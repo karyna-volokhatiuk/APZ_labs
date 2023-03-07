@@ -1,0 +1,9 @@
+GET http://10.0.0.1:8080/facade-service
+Accept: text/html
+###
+
+POST http://10.0.0.1:8080/facade-service
+Content-Type: application/json
+
+"msg1"
+###

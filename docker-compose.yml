@@ -1,0 +1,34 @@
+#https://docs.docker.com/compose/gettingstarted/
+#https://docs.docker.com/engine/tutorials/networkingcontainers/
+version: "3.8"
+services:
+  facade_service:
+    image: facade_service:latest
+    ports:
+      - "8080:8080"
+    networks:
+      apz_micro_basics_network:
+        ipv4_address: 10.0.0.2
+  logging_service:
+    image: logging_service:latest
+    ports:
+      - "8081:8081"
+    networks:
+      apz_micro_basics_network:
+        ipv4_address: 10.0.0.3
+  messages_service:
+    image: messages_service:latest
+    ports:
+      - "8082:8082"
+    networks:
+      apz_micro_basics_network:
+        ipv4_address: 10.0.0.4
+
+networks:
+  apz_micro_basics_network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.0.0.0/24
+        - gateway: 10.0.0.1
