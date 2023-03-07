@@ -7,8 +7,7 @@ services:
     ports:
       - "8080:8080"
     networks:
-      apz_micro_basics_network:
-        ipv4_address: 10.0.0.2
+      - apz_micro_basics_network
   logging_service:
     image: logging_service:latest
     ports:

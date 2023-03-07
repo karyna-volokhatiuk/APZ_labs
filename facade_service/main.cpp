@@ -47,7 +47,6 @@ public:
     }
 
 private:
-    std::string ip_facade = "10.0.0.2";
     std::string ip_logging = "10.0.0.3";
     std::string ip_messages = "10.0.0.4";
 
