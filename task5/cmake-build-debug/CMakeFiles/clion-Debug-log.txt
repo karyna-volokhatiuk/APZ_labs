@@ -1,0 +1,5 @@
+/snap/clion/229/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/229/bin/ninja/linux/x64/ninja -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G Ninja -S /home/karyna/Documents/APZ_lab2/task5 -B /home/karyna/Documents/APZ_lab2/task5/cmake-build-debug
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.71") found components: thread chrono 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/karyna/Documents/APZ_lab2/task5/cmake-build-debug
