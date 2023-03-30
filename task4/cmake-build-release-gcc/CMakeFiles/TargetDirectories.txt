@@ -1,3 +1,0 @@
-/home/karyna/Documents/APZ_lab2/task4/cmake-build-release-gcc/CMakeFiles/test_locking.dir
-/home/karyna/Documents/APZ_lab2/task4/cmake-build-release-gcc/CMakeFiles/edit_cache.dir
-/home/karyna/Documents/APZ_lab2/task4/cmake-build-release-gcc/CMakeFiles/rebuild_cache.dir

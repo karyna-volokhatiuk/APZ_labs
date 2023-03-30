@@ -1,3 +1,0 @@
-/home/karyna/Documents/APZ_lab2/task5/cmake-build-debug/CMakeFiles/bounded_queue.dir
-/home/karyna/Documents/APZ_lab2/task5/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/karyna/Documents/APZ_lab2/task5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
