@@ -75,11 +75,7 @@ int main() {
 
     std::string key = "1";
 
-    auto hz_network_config = hazelcast::client::config::client_network_config();
-    hz_network_config.add_address(hazelcast::client::address("172.17.0.1", 5701));
-    auto hz_config = hazelcast::client::client_config();
-    hz_config.set_network_config(hz_network_config);
-    auto hz = hazelcast::new_client(std::move(hz_config)).get();
+    auto hz = hazelcast::new_client().get();
     auto map = hz.get_map("map").get();
 
     map->put<std::string, int>(key, 0).get();
