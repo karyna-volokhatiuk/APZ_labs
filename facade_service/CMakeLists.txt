@@ -4,7 +4,7 @@ project(${PROJECT_NAME})
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} main.cpp controller/FacadeController.cpp controller/FacadeController.h domain/Message.h service/FacadeService.cpp service/FacadeService.h)
 
 include(cmake_files/FindLibHttpServer.cmake)
 

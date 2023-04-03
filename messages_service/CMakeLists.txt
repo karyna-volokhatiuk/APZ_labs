@@ -4,7 +4,7 @@ project(${PROJECT_NAME})
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} main.cpp controller/MessagesController.cpp controller/MessagesController.h)
 
 include(cmake_files/FindLibHttpServer.cmake)
 target_include_directories(${PROJECT_NAME} PRIVATE ${LIBHTTPSERVER_INCLUDE_DIRS})
