@@ -4,11 +4,15 @@
 #include <spdlog/spdlog.h> // https://github.com/gabime/spdlog
 #include <httpserver.hpp> // https://github.com/etr/libhttpserver
 namespace hs = httpserver;
+#include "../service/MessagesService.h"
 
 class MessagesController : public hs::http_resource {
 public:
     MessagesController();
     std::shared_ptr<hs::http_response> render_GET(const hs::http_request &req) override;
+    void save_msgs_from_queue();
+private:
+    MessagesService ms;
 };
 
 

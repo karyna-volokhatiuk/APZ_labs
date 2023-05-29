@@ -21,3 +21,6 @@ find_package(spdlog REQUIRED)
 
 target_include_directories(${PROJECT_NAME} PRIVATE spdlog)
 target_link_libraries(${PROJECT_NAME} spdlog::spdlog)
+
+find_package(hazelcast-cpp-client CONFIG REQUIRED)
+target_link_libraries(${PROJECT_NAME} hazelcast-cpp-client::hazelcast-cpp-client)
