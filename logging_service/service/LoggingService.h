@@ -1,6 +1,7 @@
-#ifndef APZ_LABS_MESSAGESSERVICE_H
-#define APZ_LABS_MESSAGESSERVICE_H
+#ifndef LOGGING_SERVICE_LOGGINGSERVICE_H
+#define LOGGING_SERVICE_LOGGINGSERVICE_H
 
+#include <spdlog/spdlog.h> // https://github.com/gabime/spdlog
 #include <hazelcast/client/hazelcast.h>
 #include <ppconsul/agent.h> // https://github.com/oliora/ppconsul/tree/master // https://developer.hashicorp.com/consul/downloads
 #include <ppconsul/kv.h>
@@ -9,14 +10,13 @@
 using namespace hazelcast::client;
 using ppconsul::Consul;
 
-#include "../repository/MessagesRepository.h"
+#include "../domain/Message.h"
 
-class MessagesService {
+class LoggingService {
 public:
-    MessagesService(int port);
-    void save_msgs_from_queue();
-    std::vector<std::string> get_saved_msgs();
-
+    LoggingService(int port);
+    void add_log(const Message& msg);
+    std::vector<Message> get_logs();
 private:
     hazelcast::client::hazelcast_client hz;
 
@@ -25,10 +25,9 @@ private:
     ppconsul::catalog::Catalog catalog;
     ppconsul::kv::Kv kv;
 
-    std::shared_ptr<iqueue> hz_queue;
-
-    MessagesRepository msgs_rep;
+    std::shared_ptr<imap> hz_map;
 };
 
 
-#endif //APZ_LABS_MESSAGESSERVICE_H
+
+#endif //LOGGING_SERVICE_LOGGINGSERVICE_H

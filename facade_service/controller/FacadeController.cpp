@@ -1,6 +1,6 @@
 #include "FacadeController.h"
 
-FacadeController::FacadeController() : fs(){
+FacadeController::FacadeController(int port) : fs(port){
     disallow_all();
     // Used to allow or disallow a method.
     set_allowing("POST", true);

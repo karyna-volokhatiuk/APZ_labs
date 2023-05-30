@@ -16,3 +16,6 @@ target_link_libraries(${PROJECT_NAME} spdlog::spdlog)
 
 find_package(hazelcast-cpp-client CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME} hazelcast-cpp-client::hazelcast-cpp-client)
+
+find_package(ppconsul)
+target_link_libraries(${PROJECT_NAME} ppconsul)

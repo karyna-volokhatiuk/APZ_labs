@@ -1,6 +1,6 @@
 #include "LoggingController.h"
 
-LoggingController::LoggingController() : ls(){
+LoggingController::LoggingController(int port) : ls(port){
     disallow_all();
     // Used to allow or disallow a method.
     set_allowing("POST", true);

@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
     hs::webserver ws = hs::create_webserver(port);
 
     spdlog::info("Creating a resource");
-    MessagesController mc;
+    MessagesController mc{port};
 
     spdlog::info("Register a resource");
     ws.register_resource("/messages-service", &mc);

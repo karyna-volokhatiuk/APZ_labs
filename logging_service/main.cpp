@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
     hs::webserver ws = hs::create_webserver(port);
 
     spdlog::info("Creating a resource");
-    LoggingController lc;
+    LoggingController lc{port};
 
     spdlog::info("Register a resource");
     ws.register_resource("/logging-service", &lc);

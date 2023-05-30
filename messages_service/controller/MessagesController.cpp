@@ -1,6 +1,6 @@
 #include "MessagesController.h"
 
-MessagesController::MessagesController(): ms(){
+MessagesController::MessagesController(int port): ms(port){
     disallow_all();
     set_allowing("GET", true);
 }

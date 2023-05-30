@@ -10,7 +10,7 @@ namespace hs = httpserver;
 
 class FacadeController : public hs::http_resource {
 public:
-    FacadeController();
+    FacadeController(int port);
     std::shared_ptr<hs::http_response> render_POST(const hs::http_request &req) override;
     std::shared_ptr<hs::http_response> render_GET(const hs::http_request &req) override;
 

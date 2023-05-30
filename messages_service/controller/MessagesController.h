@@ -8,7 +8,7 @@ namespace hs = httpserver;
 
 class MessagesController : public hs::http_resource {
 public:
-    MessagesController();
+    MessagesController(int port);
     std::shared_ptr<hs::http_response> render_GET(const hs::http_request &req) override;
     void save_msgs_from_queue();
 private:
